@@ -71,13 +71,13 @@ describe('Tests for createElement', function() {
 describe('Tests for createElements', function() {
 
   let arr = [
-    {element: 'h1', innerHTML: 'This is a headline'},
-    {element: 'p', innerHTML:  'This is a paragraph'},
-    {element: 'h2', innerHTML: 'This is a sub headline'},
-    {element: 'p', innerHTML: 'This is a paragraph'}
+    {tagName: 'h1', innerHTML: 'A Brainy Quote'},
+    {tagName: 'p', innerHTML:  'The sharp employ the sharp.'},
+    {tagName: 'h1', innerHTML: 'Another Brainy Quote'},
+    {tagName: 'p', innerHTML: 'The pen is mightier than the sword if the sword is very short, and the pen is very sharp.'}
   ];
-  let correct = '<h1>This is a headline</h1><p>This is a paragraph</p>' +
-    '<h2>This is a sub headline</h2><p>This is a paragraph</p>';
+  let correct = '<h1>A Brainy Quote</h1><p>The sharp employ the sharp.</p>' +
+    '<h1>Another Brainy Quote</h1><p>The pen is mightier than the sword if the sword is very short, and the pen is very sharp.</p>';
 
   it('ShaverSharp.createElements() should return a correct string ', function(done) {
     expect(shaverSharp.createElements(arr)).to.eql(correct);
